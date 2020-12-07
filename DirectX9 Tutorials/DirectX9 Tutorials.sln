@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "001_Vertex Buffer", "001_Ve
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "002_Index Buffer", "002_Index Buffer\002_Index Buffer_2010.vcxproj", "{FD717F80-EAB3-4411-A352-3267C5612906}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "001_Vertex, Index Buffer", "003_Mesh\003_Mesh_2010.vcxproj", "{D286D70F-A55F-4D61-ABC6-AEDC832937BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,18 @@ Global
 		{FD717F80-EAB3-4411-A352-3267C5612906}.Release|x64.Build.0 = Release|x64
 		{FD717F80-EAB3-4411-A352-3267C5612906}.Release|x86.ActiveCfg = Release|Win32
 		{FD717F80-EAB3-4411-A352-3267C5612906}.Release|x86.Build.0 = Release|Win32
+		{D286D70F-A55F-4D61-ABC6-AEDC832937BC}.Debug|x64.ActiveCfg = Debug|x64
+		{D286D70F-A55F-4D61-ABC6-AEDC832937BC}.Debug|x64.Build.0 = Debug|x64
+		{D286D70F-A55F-4D61-ABC6-AEDC832937BC}.Debug|x86.ActiveCfg = Debug|Win32
+		{D286D70F-A55F-4D61-ABC6-AEDC832937BC}.Debug|x86.Build.0 = Debug|Win32
+		{D286D70F-A55F-4D61-ABC6-AEDC832937BC}.Profile|x64.ActiveCfg = Profile|x64
+		{D286D70F-A55F-4D61-ABC6-AEDC832937BC}.Profile|x64.Build.0 = Profile|x64
+		{D286D70F-A55F-4D61-ABC6-AEDC832937BC}.Profile|x86.ActiveCfg = Profile|Win32
+		{D286D70F-A55F-4D61-ABC6-AEDC832937BC}.Profile|x86.Build.0 = Profile|Win32
+		{D286D70F-A55F-4D61-ABC6-AEDC832937BC}.Release|x64.ActiveCfg = Release|x64
+		{D286D70F-A55F-4D61-ABC6-AEDC832937BC}.Release|x64.Build.0 = Release|x64
+		{D286D70F-A55F-4D61-ABC6-AEDC832937BC}.Release|x86.ActiveCfg = Release|Win32
+		{D286D70F-A55F-4D61-ABC6-AEDC832937BC}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

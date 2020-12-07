@@ -1,3 +1,3 @@
 ﻿D:\Program Files (x86)\Microsoft Visual Studio 2019\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(491,5): warning MSB8028: 중간 디렉터리(Debug\)에 다른 프로젝트(001_Vertex, Index Buffer.vcxproj)에서 공유하는 파일이 포함되어 있습니다.  이로 인해 잘못된 정리 및 다시 빌드 동작이 수행될 수 있습니다.
-DXUT.obj : warning LNK4075: '/EDITANDCONTINUE'이(가) '/SAFESEH' 사양으로 인해 무시됩니다.
-  001_Vertex, Index Buffer_2010.vcxproj -> E:\프로그래밍\개인공부\DirectX3D\DirectX9 Tutorials\Debug\001_Vertex Buffer.exe
+  
+001_Vertex, Index Buffer.rc(32): error RC2135: file not found: E:\

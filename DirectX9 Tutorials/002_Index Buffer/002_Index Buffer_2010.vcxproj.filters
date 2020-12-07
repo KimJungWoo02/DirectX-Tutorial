@@ -76,7 +76,7 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="001_Vertex, Index Buffer.rc">
+    <ResourceCompile Include="002_Index Buffer.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
   </ItemGroup>

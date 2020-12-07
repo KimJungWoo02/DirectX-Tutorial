@@ -411,7 +411,7 @@
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h" />
-    <ResourceCompile Include="001_Vertex, Index Buffer.rc" />
+    <ResourceCompile Include="001_Vertex Buffer.rc" />
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
