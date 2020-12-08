@@ -2,6 +2,8 @@
 #include "resource.h"
 
 
+//Space 키를 누르면 쉐이딩 모드를 전환할 수 있다.
+
 /*
 
 참고 링크
@@ -28,6 +30,8 @@ struct CUSTOMVERTEX
     DWORD color;
 };
 
+bool bFlat;
+
 //정점 구조 설정 정의
 //정점 구조를 미리 매크로로 선언하여 코드를 짧게 쓰도록 하였다.
 //개발자가 선언한 정점 구조체가 다음과 같이 이루어져 있다고 컴퓨터에게 알려주는 것(비트 OR연산자를 활용하여 처리한다.)
@@ -35,6 +39,7 @@ struct CUSTOMVERTEX
 #define D3DFVF_CUSTOMVERTEX (D3DFVF_XYZRHW|D3DFVF_DIFFUSE)
 
 //각 정점에 값을 초기화 하는 작업
+//색깔값을 16진수 말고도 D3DXCOLOR_ARGB와 같은 매크로를 사용해도 된다.
 CUSTOMVERTEX vertices[] =
 {
     {150.0f,50.0f,0.5f,1.0f,0xffff0000},        //정점1
@@ -113,7 +118,17 @@ void CALLBACK OnD3D9FrameRender( IDirect3DDevice9* pd3dDevice, double fTime, flo
         OffsetInBytes - 렌더링 파이프라인으로 공급될 버텍스 데이터의 시작을 지정하는 스트림의 시작 오프셋,
         0이외에 값을 지정하려면 D3DCAPS9 구조체의 D3DDEVCAPS2_STREAMOFFSET 플래그를 확인하여 개발자의 장치가 이를 지원하는지 확인해야한다.
         Stride - 스트림에 연결하고자는 버텍스 버퍼 내 각 요소의 바이트 수(정점 1개의 바이트)
+
         */
+
+        if (bFlat)
+            pd3dDevice->SetRenderState(D3DRS_SHADEMODE, D3DSHADE_FLAT);     //쉐이드 모드를 플랫(직각) 선형 처리를 하지 않는다.
+        else
+            pd3dDevice->SetRenderState(D3DRS_SHADEMODE, D3DSHADE_GOURAUD);  //쉐이드 모드를 선형 처리한다.
+
+        if(DXUTWasKeyPressed(VK_SPACE))
+            bFlat = !bFlat;
+
         pd3dDevice->SetStreamSource(0, g_pVB, 0, sizeof(CUSTOMVERTEX));
 
         //정점 포맷을 디바이스에 지정한다.

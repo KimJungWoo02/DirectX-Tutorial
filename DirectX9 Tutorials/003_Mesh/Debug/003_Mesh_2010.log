@@ -47,4 +47,4 @@ D:\Program Files (x86)\DirectX\Include\d3d10.h(608,1): warning C4005: 'D3D10_ERR
 D:\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56279): message : 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS'의 이전 정의를 참조하십시오.
 D:\Program Files (x86)\DirectX\Include\d3d10.h(609,1): warning C4005: 'D3D10_ERROR_FILE_NOT_FOUND': 매크로 재정의
 D:\Windows Kits\10\Include\10.0.18362.0\shared\winerror.h(56288): message : 'D3D10_ERROR_FILE_NOT_FOUND'의 이전 정의를 참조하십시오.
-  003_Mesh_2010.vcxproj -> E:\프로그래밍\개인공부\DirectX3D\DirectX9 Tutorials\Debug\003_Mesh.exe
+  003_Mesh_2010.vcxproj -> E:\Github\DirectX-Tutorial\DirectX9 Tutorials\Debug\003_Mesh.exe

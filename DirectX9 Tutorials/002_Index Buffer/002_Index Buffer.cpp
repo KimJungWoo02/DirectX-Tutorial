@@ -104,7 +104,7 @@ void CALLBACK OnD3D9FrameRender( IDirect3DDevice9* pd3dDevice, double fTime, flo
     if( SUCCEEDED( pd3dDevice->BeginScene() ) )
     {
         //오브젝트를 회전하기 위해 World 좌표를 변환하는 것.
-        //이것에 대한 자세한 내용은  Matrix 프로젝트를 참고할 것.
+        //이것에 대한 자세한 내용은  Camera 프로젝트를 참고할 것.
         D3DXMATRIX Rx, Ry;
         D3DXMatrixRotationX(&Rx, 3.14f / 4.0f);
         static float y = 0.0f;

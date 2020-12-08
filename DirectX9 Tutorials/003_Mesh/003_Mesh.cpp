@@ -4,6 +4,7 @@
 //이 프로젝트에서는 DirectX 내부에 있는 D3DXCreate 함수를 활용하여 도형을 출력하고 
 //x파일을 활용하여 메쉬를 불러와 출력하는 예제 프로젝트입니다.
 //다음 프로젝트인 Mesh Loder에서 obj파일을 불러와 데이터 파싱을 하여 실제 메쉬를 출력한다.
+//방향이 오른쪽, 왼쪽을 통하여 메쉬 전환이 가능하다.
 //https://m.blog.naver.com/PostView.nhn?blogId=aaa4379&logNo=220527229526&proxyReferer=https:%2F%2Fwww.google.com%2F
 
 ID3DXMesh* Objects[5] = { 0, 0, 0, 0, 0 };
@@ -99,23 +100,17 @@ void CALLBACK OnD3D9FrameRender( IDirect3DDevice9* pd3dDevice, double fTime, flo
 		static float cameraHeightDirection = 5.0f;
 
 		D3DXVECTOR3 position(cosf(angle) * 10.0f, cameraHeight, sinf(angle) * 10.0f);
-
-		// the camera is targetted at the origin of the world
 		D3DXVECTOR3 target(0.0f, 0.0f, 0.0f);
-
-		// the worlds up vector
 		D3DXVECTOR3 up(0.0f, 1.0f, 0.0f);
 
 		D3DXMATRIX V;
 		D3DXMatrixLookAtLH(&V, &position, &target, &up);
 		pd3dDevice->SetTransform(D3DTS_VIEW, &V);
 
-		// compute the position for the next frame
 		angle += fElapsedTime;
 		if (angle >= 6.28f)
 			angle = 0.0f;
 
-		// compute the height of the camera for the next frame
 		cameraHeight += cameraHeightDirection * fElapsedTime;
 		if (cameraHeight >= 10.0f)
 			cameraHeightDirection = -5.0f;
